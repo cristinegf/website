@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Vite App</title>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body
+        x-data="{rojo:true, blue:false, violeta:false, yellow:false, rojo_t:true}"
+        x-bind:class="{ fondo_rojo: rojo, fondo_azul: blue, fondo_violeta: violeta ,fondo_amarillo: yellow }"
+>
+
+<div id="header" class="flex flex-row">
+    <!--Caja changer fondos-->
+    <div class="fixed  text-center m-2 py-2 px-4 rounded shadow bg-gray-50 border-b border-gray-400 mt-20 right-0 top-0">
+        <span class="text-md tracking-widest   block  text-gray-800">click me!</span>
+
+        <button @click="
+                    blue = false;
+                    rojo = true;
+                    violeta = false;
+                    yellow = false;
+                    blue_t = false;
+                    rojo_t = true;
+                    violeta_t = false;
+                    yellow_t = false;"
+
+                class=" button-color border-blue-cris  bg-red-cris"></button>
+        <button @click="
+                  blue = true;
+                  rojo = false;
+                  violeta = false;
+                  yellow = false;
+                  blue_t = true;
+                  rojo_t = false;
+                  violeta_t = false;
+                  yellow_t = false;"
+                class=" button-color border-red-cris  bg-blue-cris"></button>
+        <button @click="
+                  blue = false;
+                  rojo = false;
+                  violeta = true;
+                  yellow = false;
+                  blue_t = false;
+                  rojo_t = false;
+                  violeta_t = true;
+                  yellow_t = false;"
+                class="button-color border-purple-600 bg-purple-400"></button>
+        <button @click="
+                  blue = false;
+                  rojo = false;
+                  violeta = false;
+                  yellow = true;
+                  blue_t = false;
+                  rojo_t = false;
+                  violeta_t = false;
+                  yellow_t = true;"
+                class=" button-color border-yellow-600 bg-yellow-400"></button>
+    </div>
+    <div class="flex flex-row">
+        <h1 x-show="rojo_t"
+            x-transition:enter="transition ease-out duration-400"
+            x-transition:enter-start="opacity-0 transform scale-90"
+            x-transition:enter-end="opacity-100 transform scale-100"
+
+            class="p-20 text-7xl text-red-cris"> crisdotcom</h1>
+        <h1 x-show="blue_t"
+            x-transition:enter="transition ease-out duration-500"
+            x-transition:enter-start="opacity-0 transform scale-90"
+            x-transition:enter-end="opacity-100 transform scale-100"
+
+            class="p-20 text-7xl text-blue-cris"> crisdotcom</h1>
+        <h1 x-show="violeta_t"
+            x-transition:enter="transition ease-out duration-400"
+            x-transition:enter-start="opacity-0 transform scale-90"
+            x-transition:enter-end="opacity-100 transform scale-100"
+
+            class="p-20 text-7xl text-purple-400"> crisdotcom</h1>
+        <h1 x-show="yellow_t"
+            x-transition:enter="transition ease-out duration-500"
+            x-transition:enter-start="opacity-0 transform scale-90"
+            x-transition:enter-end="opacity-100 transform scale-100"
+
+            class="p-20 text-7xl text-yellow-400"> crisdotcom</h1>
+
+    </div>
+
+</div>
+<div class="max-w-7xl flex mx-auto flex-wrap flex-row items-baseline justify-center content-center bg-gray-200 border-b border-red-400 shadow" id="menu">
+    <img class="w-20 h-20 p-4 m-4 " src="images/menu/1.png" alt="shop">
+    <img class="w-20 h-20 p-4 m-4 " src="images/menu/2.png" alt="shop">
+    <img class="w-20 h-20 p-4 m-4 " src="images/menu/3.png" alt="shop">
+    <img class="w-20 h-20 p-4 m-4 " src="images/menu/4.png" alt="shop">
+</div>
+<div id="main" class="py-16 h-screen antialiased text-blue-cris">
+  <div class="flex flex-row">
+      <div class="p-20 ">
+          <h1 class=" border-red-400 border-r w-36">About me </h1>
+      </div>
+      <div>
+         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis purus quam, varius ac quam non, iaculis rhoncus libero. Fusce nisi justo, egestas vel ultrices sed, dapibus id nunc. Etiam tempor porta felis, in laoreet lectus lacinia vulputate. Maecenas ac blandit nibh, sit amet mattis metus. In sit amet velit dignissim, fermentum ligula vel, ornare augue. Proin vestibulum, enim et condimentum suscipit, neque massa dignissim orci, a aliquet felis odio eu ex. Nunc eget sagittis arcu, id imperdiet orci.
+         </p>
+          <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam lobortis facilisis congue. Sed porta ante ac sem bibendum semper. Vivamus ac odio tortor. Quisque aliquam urna aliquet nulla sollicitudin pharetra ut sit amet leo. Sed non leo quis mi varius porttitor eget eget sapien. Nulla justo metus, pretium vel risus id, tristique interdum dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus fringilla congue sagittis.
+          </p>
+      </div>
+  </div>
+
+</div>
+<div id="footer">
+    <svg class="w-5 h-5 text-blue-cris" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+         stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"/>
+    </svg>
+    copy Crisdotcom 2021
+</div>
+
+
+<script>
+    let rojo, violeta, blue, yellow;
+    let rojo_t, violeta_t, blue_t, yellow_t;
+
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "test-app",
+  "version": "0.0.1",
+  "license": "Mit",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.4",
+    "postcss": "^8.2.6",
+    "tailwindcss": "^2.0.3",
+    "vite": "^2.0.1"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.2.1",
+    "alpinejs": "^2.8.0"
+  }
+}

@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,800;1,500&family=Alegreya+Sans:ital,wght@0,100;0,300;0,500;0,800;1,100;1,300;1,500;1,800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h1 {
+        @apply font-display font-extrabold  text-5xl;
+    }
+
+    h2 {
+        @apply font-display font-bold text-3xl;
+    }
+
+    h3{
+        @apply font-display  text-2xl
+    }
+}
+
+@layer components {
+    .primary{
+        @apply text-red-cris
+    }
+    .button-color{
+        @apply m-2 rounded border-2 w-5 h-5
+    }
+    .fondo_rojo{
+        background: url("images/fondos/rojo1.png") repeat;
+    }
+    .fondo_azul{
+        background: url("images/fondos/blue.png") repeat;
+    }
+    .fondo_amarillo{
+        background: url("images/fondos/amarillo.png") repeat;
+    }
+    .fondo_violeta{
+        background: url("images/fondos/black.png") repeat;
+    }
+}
